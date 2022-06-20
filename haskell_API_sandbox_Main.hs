@@ -1,7 +1,12 @@
 module Main where
 
+import Network.Wreq
+
 main :: IO ()
-main = putStrLn "Hello, World!"
+main = do
+ response <- get "https://libretranslate.com/languages"
+ print response 
+
 
 
 
